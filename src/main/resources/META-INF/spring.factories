@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+misaka.net.IpGeolocationAutoConfiguration,\
+misaka.geo.GeolocationAutoConfiguration
+
+
+
