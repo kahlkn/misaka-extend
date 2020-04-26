@@ -70,6 +70,12 @@
         </dependency>
         <!-- ///// end artoria //// -->
 
+        <dependency>
+            <groupId>com.github.kahlkn</groupId>
+            <artifactId>misaka</artifactId>
+            <version>1.0.0.2019044501-SNAPSHOT</version>
+        </dependency>
+
         <!-- ///// begin spring //// -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
