@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.kahlkn</groupId>
-    <artifactId>misaka</artifactId>
+    <artifactId>misaka-extend</artifactId>
     <version>1.0.0.20190445-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Misaka</name>
-    <url>https://github.com/kahlkn/misaka</url>
-    <description>Misaka.</description>
+    <name>Misaka extend</name>
+    <url>https://github.com/kahlkn/misaka-extend</url>
+    <description>Misaka extend.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,8 +34,8 @@
     </developers>
 
     <scm>
-        <url>https://github.com/kahlkn/misaka</url>
-        <connection>scm:git:https://github.com/kahlkn/misaka.git</connection>
+        <url>https://github.com/kahlkn/misaka-extend</url>
+        <connection>scm:git:https://github.com/kahlkn/misaka-extend.git</connection>
         <developerConnection>https://github.com/kahlkn</developerConnection>
     </scm>
 
@@ -59,13 +59,13 @@
         <dependency>
             <groupId>com.github.kahlkn</groupId>
             <artifactId>artoria</artifactId>
-            <version>1.0.0.20191020.beta</version>
+            <version>1.0.0.2019102003-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>com.github.kahlkn</groupId>
             <artifactId>artoria-extend</artifactId>
-            <version>1.0.0.20190445-SNAPSHOT</version>
+            <version>1.0.0.2019101204-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <!-- ///// end artoria //// -->

@@ -1,4 +1,4 @@
-package kurumi.bank;
+package misaka.bank;
 
 import artoria.crypto.EncryptUtils;
 import artoria.file.Csv;

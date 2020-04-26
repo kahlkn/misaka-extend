@@ -1,4 +1,4 @@
-package kurumi.bank;
+package misaka.bank;
 
 import org.junit.Ignore;
 import org.junit.Test;
