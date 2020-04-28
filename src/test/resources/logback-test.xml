@@ -14,4 +14,8 @@
         <appender-ref ref="CONSOLE"/>
     </root>
 
+    <logger name="org.apache.commons.beanutils.BeanUtils" addtivity="false" level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
 </configuration>
