@@ -33,7 +33,7 @@ public class SupfreeNetBankCardIssuerProvider implements BankCardIssuerProvider 
     }
 
     @Override
-    public BankCardIssuer findBankCardIssuer(String bankCardNumber) {
+    public BankCardIssuer findByBankCardNumber(String bankCardNumber) {
         try {
             HttpRequest request = new HttpRequest();
             request.setMethod(HttpMethod.GET);

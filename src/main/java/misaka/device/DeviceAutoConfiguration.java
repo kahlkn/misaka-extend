@@ -1,4 +1,4 @@
-package misaka.bank;
+package misaka.device;
 
 import artoria.crypto.EncryptUtils;
 import artoria.file.Csv;
@@ -14,18 +14,14 @@ import java.io.InputStream;
 
 import static artoria.common.Constants.DEFAULT_ENCODING_NAME;
 
-/**
- * Bank card issuer auto configuration.
- * @author Kahle
- */
 @Configuration
-public class BankCardIssuerAutoConfiguration implements InitializingBean, DisposableBean {
-    private static Logger log = LoggerFactory.getLogger(BankCardIssuerAutoConfiguration.class);
+public class DeviceAutoConfiguration implements InitializingBean, DisposableBean {
+    private static Logger log = LoggerFactory.getLogger(DeviceAutoConfiguration.class);
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        Class<?> callingClass = BankCardIssuerAutoConfiguration.class;
-        String resourceName = "bank_card_issuer.data";
+        Class<?> callingClass = DeviceAutoConfiguration.class;
+        String resourceName = "device_info.data";
         InputStream inputStream =
                 ClassLoaderUtils.getResourceAsStream(resourceName, callingClass);
         byte[] byteArray = IOUtils.toByteArray(inputStream);
@@ -33,8 +29,7 @@ public class BankCardIssuerAutoConfiguration implements InitializingBean, Dispos
         Csv csv = new Csv();
         csv.setCharset(DEFAULT_ENCODING_NAME);
         csv.readFromByteArray(decrypt);
-        BankCardIssuerProvider provider = new FileBasedBankCardIssuerProvider(csv);
-        BankCardIssuerUtils.setBankCardIssuerProvider(provider);
+        DeviceUtils.setDeviceProvider(new FileBasedDeviceProvider(csv));
     }
 
     @Override

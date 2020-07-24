@@ -18,13 +18,13 @@ public class BankCardIssuerUtilsTest {
         BankCardIssuerUtils.setBankCardIssuerProvider(new SupfreeNetBankCardIssuerProvider());
 //        BankCardIssuerUtils.setBankCardIssuerProvider(new FileBasedBankCardIssuerProvider());
 //        BankCardIssuerUtils.setBankCardIssuerProvider(new FileBasedBankCardIssuerProvider("bank_card_info.data"));
-        BankCardIssuer bankCardIssuer = BankCardIssuerUtils.findBankCardIssuer("622600687501042806");
+        BankCardIssuer bankCardIssuer = BankCardIssuerUtils.findByBankCardNumber("622600687501042806");
         log.info("{}", JSON.toJSONString(bankCardIssuer));
-        BankCardIssuer bankCardIssuer1 = BankCardIssuerUtils.findBankCardIssuer("6230960288002899254");
+        BankCardIssuer bankCardIssuer1 = BankCardIssuerUtils.findByBankCardNumber("6230960288002899254");
         log.info("{}", JSON.toJSONString(bankCardIssuer1));
-        BankCardIssuer bankCardIssuer2 = BankCardIssuerUtils.findBankCardIssuer("6217994000264606028");
+        BankCardIssuer bankCardIssuer2 = BankCardIssuerUtils.findByBankCardNumber("6217994000264606028");
         log.info("{}", JSON.toJSONString(bankCardIssuer2));
-        BankCardIssuer bankCardIssuer3 = BankCardIssuerUtils.findBankCardIssuer("6230666046001759766");
+        BankCardIssuer bankCardIssuer3 = BankCardIssuerUtils.findByBankCardNumber("6230666046001759766");
         log.info("{}", JSON.toJSONString(bankCardIssuer3));
     }
 

@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.ParameterizedType;
+import java.math.BigDecimal;
 import java.util.Map;
 
 /**
@@ -42,8 +43,8 @@ public class IpApiIpGeolocationProvider implements IpGeolocationProvider {
         String lat = map.get("lat");
         String lon = map.get("lon");
         try {
-            Double latitude = lat != null ? Double.parseDouble(lat) : null;
-            Double longitude = lon != null ? Double.parseDouble(lon) : null;
+            BigDecimal latitude = lat != null ? new BigDecimal(lat) : null;
+            BigDecimal longitude = lon != null ? new BigDecimal(lon) : null;
             ipGeolocation.setLatitude(latitude);
             ipGeolocation.setLongitude(longitude);
         }

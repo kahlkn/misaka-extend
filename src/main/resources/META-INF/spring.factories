@@ -1,5 +1,7 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+misaka.app.push.JPushAutoConfiguration,\
 misaka.bank.BankCardIssuerAutoConfiguration,\
+misaka.device.DeviceAutoConfiguration,\
 misaka.net.IpGeolocationAutoConfiguration,\
 misaka.geo.GeolocationAutoConfiguration
 

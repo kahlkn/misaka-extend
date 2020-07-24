@@ -26,7 +26,6 @@ public class GeolocationAutoConfiguration implements InitializingBean, Disposabl
 //        csv.setCharset(DEFAULT_ENCODING_NAME);
 //        csv.readFromByteArray(decrypt);
         GeolocationProvider provider = new FileBasedGeolocationProvider();
-        log.info("Set area information provider \"{}\" success", provider);
         GeolocationUtils.setGeolocationProvider(provider);
     }
 

@@ -139,7 +139,7 @@ public class FileBasedBankCardIssuerProvider implements BankCardIssuerProvider {
     }
 
     @Override
-    public BankCardIssuer findBankCardIssuer(String bankCardNumber) {
+    public BankCardIssuer findByBankCardNumber(String bankCardNumber) {
         if (StringUtils.isBlank(bankCardNumber)) { return null; }
         int length = bankCardNumber.length();
         BankCardIssuer bankCardIssuer;
