@@ -1,5 +1,6 @@
 package misaka.geo;
 
+import artoria.beans.BeanUtils;
 import artoria.exception.ExceptionUtils;
 import artoria.file.Csv;
 import artoria.file.FileUtils;
@@ -56,7 +57,7 @@ public class FileBasedGeolocationProvider implements GeolocationProvider {
 
     private void initialize(Csv csv) {
         if (csv == null) { return; }
-        dataList.addAll(csv.toBeanList(Geolocation.class));
+        dataList.addAll(BeanUtils.mapToBeanInList(csv.toMapList(), Geolocation.class));
         for (Geolocation area : dataList) {
             String country = area.getCountry();
             String countryCode = area.getCountryCode();

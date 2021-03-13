@@ -64,7 +64,7 @@ public class FileBasedBankCardIssuerProvider implements BankCardIssuerProvider {
 
     protected void initialize(Csv csv) {
         if (csv == null) { return; }
-        List<BankCardIssuer> list = csv.toBeanList(BankCardIssuer.class);
+        List<BankCardIssuer> list = BeanUtils.mapToBeanInList(csv.toMapList(), BankCardIssuer.class);
         if (CollectionUtils.isEmpty(list)) { return; }
         for (BankCardIssuer bankCardIssuer : list) {
             if (bankCardIssuer == null) { continue; }
@@ -87,7 +87,7 @@ public class FileBasedBankCardIssuerProvider implements BankCardIssuerProvider {
             saveCsv.addHeader("bankCardType", "bankCardType");
             saveCsv.addHeader("issuerIdentificationNumber", "issuerIdentificationNumber");
             saveCsv.addHeader("bankCardNumberLength", "bankCardNumberLength");
-            saveCsv.fromBeanList(list);
+            saveCsv.fromMapList(BeanUtils.beanToMapInList(list));
             saveCsv.writeToFile(new File(filePath));
         }
         catch (Exception e) {

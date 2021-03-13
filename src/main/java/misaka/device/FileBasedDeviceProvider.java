@@ -1,5 +1,6 @@
 package misaka.device;
 
+import artoria.beans.BeanUtils;
 import artoria.data.Device;
 import artoria.data.RecombineUtils;
 import artoria.file.Csv;
@@ -13,7 +14,7 @@ public class FileBasedDeviceProvider implements DeviceProvider {
     private Map<String, Device> deviceMap;
 
     public FileBasedDeviceProvider(Csv csv) {
-        List<Device> deviceList = csv.toBeanList(Device.class);
+        List<Device> deviceList = BeanUtils.mapToBeanInList(csv.toMapList(), Device.class);
         Map<String, Device> modelMap = RecombineUtils.listToMapBean(deviceList, "model");
         deviceMap = Collections.unmodifiableMap(modelMap);
     }
