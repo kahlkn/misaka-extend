@@ -232,7 +232,7 @@ public class SimpleWhoisProvider implements WhoisProvider {
     }
 
     private String cutout(String data, String pattern) {
-        String val = StringUtils.delete(data, pattern);
+        String val = StringUtils.remove(data, pattern);
         return val.trim();
     }
 
